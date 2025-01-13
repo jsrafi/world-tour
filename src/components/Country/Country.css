@@ -5,3 +5,23 @@
     margin: 10px;
     border-radius: 10px;
 }
+.country img
+{
+    width: 25vw;
+    height: 25vh;
+}
+.bg1
+{
+    background-color: red;
+    color: white;
+}
+.bg2
+{
+    background-color: blueviolet;
+    color: white;
+}
+.gaping
+{
+    display: flex;
+    gap: 15px;
+}

@@ -1,0 +1,19 @@
+.country-style
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.flags
+{
+    width: 120px;
+    height: 70px;
+    margin-right: 5px;
+}
+.box-color
+{
+    border: 2px solid red;
+    height: 25vh;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+}
