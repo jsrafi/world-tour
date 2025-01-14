@@ -17,19 +17,25 @@ const Countries = () => {
             .then(data => setCountries(data))
     }, [])
 
+
+    // showing visited countries
     const handleVisitedCountries = (props) => {
         console.log(props)
         const newVisitedCountries = [...visitedCountries, props];
         setVisitedCountries(newVisitedCountries)
         handleWantToVisitedCountries2(props)
     }
+    // deleteing not visited countries
     const handleVisitedCountries2 = (props) => {
         const newVisitedCountries = visitedCountries.filter(country => country !== props);
         setVisitedCountries(newVisitedCountries);
+        
+        
     }
+    
 
 
-
+//  showing want to visit countries
     const handleWantToVisitedCountries =(props) =>
     {
         const newWantToVisitedCountries = [...wantToVisitedCountries, props];
@@ -63,7 +69,7 @@ const Countries = () => {
             </div>
             <div className="country-style">
                 {
-                    countries.map(country => <Country key={country.cca3} props={country} handleVisitedCountries={handleVisitedCountries} handleVisitedCountries2={handleVisitedCountries2}  handleWantToVisitedCountries={handleWantToVisitedCountries} handleWantToVisitedCountries2={handleWantToVisitedCountries2}></Country>)
+                    countries.map(country => <Country key={country.cca3} props={country} handleVisitedCountries={handleVisitedCountries} handleVisitedCountries2={handleVisitedCountries2}  handleWantToVisitedCountries={handleWantToVisitedCountries} handleWantToVisitedCountries2={handleWantToVisitedCountries2} ></Country>)
                 }
             </div>
         </div>

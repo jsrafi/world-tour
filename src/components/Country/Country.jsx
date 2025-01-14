@@ -6,11 +6,19 @@ const Country = ({ props ,handleVisitedCountries,handleVisitedCountries2,handleW
     const { name, flags, population, area } = props;
     const { common } = name;
     const [visit, setVisit] = useState(false)
+
+
+    const setData =()=>
+        {
+            setWantToVisit(false);
+        }
+    
     // console.log(handleVisitedCountries)
 
     const visiting = () => {
         setVisit(!visit)
         visit? handleVisitedCountries2(props): handleVisitedCountries(props) 
+        visit && setData();
     }
     const [wantToVisit, setWantToVisit] = useState(false);
     const wantVisit = () => {
