@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Country.css'
 
-const Country = ({ props ,handleVisitedCountries,handleVisitedCountries2}) => {
+const Country = ({ props ,handleVisitedCountries,handleVisitedCountries2,handleWantToVisitedCountries,handleWantToVisitedCountries2}) => {
     // console.log(props)
     const { name, flags, population, area } = props;
     const { common } = name;
@@ -15,6 +15,7 @@ const Country = ({ props ,handleVisitedCountries,handleVisitedCountries2}) => {
     const [wantToVisit, setWantToVisit] = useState(false);
     const wantVisit = () => {
         setWantToVisit(!wantToVisit)
+        wantToVisit? handleWantToVisitedCountries2(props): handleWantToVisitedCountries(props) 
     }
     return (
         <div className='country'>
